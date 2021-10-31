@@ -1,21 +1,13 @@
 import { forward } from 'effector'
-import {
-  $route, // goTo,
-  // historyBack,
-  // beforeRouteEnter,
-  // routeChanged,
-  // onRouteChanged,
-} from 'effector-routing';
-
 
 import { appMount } from './model'
 
-import { fxRouterInit } from '../../../shared'
+import {} from '../../../shared'
 
-forward({
-  from: appMount,
-  to: fxRouterInit,
-})
+
+
 
 appMount.watch(() => console.log('App started!'))
-$route.watch(() => console.log('$route'))
+// $route.watch((x) => console.log('$route', x))
+// $history.watch((x) => console.log('$history', x))
+// fxRouterInit.done.watch((x) => console.log('router init', x))

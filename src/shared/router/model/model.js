@@ -1,3 +1,3 @@
 import { createEffect } from 'effector'
 
-export const fxRouterInit = createEffect('fx router init')
+export const fxRouterInit = createEffect()
