@@ -1,3 +1,5 @@
+import { Typography } from '@mui/material'
+
 export const AuthPage = () => {
-  return <div>UJIN/Auth</div>
+  return <Typography variant="h2">UJIN/Auth</Typography>
 }

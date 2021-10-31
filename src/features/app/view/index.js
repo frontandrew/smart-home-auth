@@ -1,5 +1,5 @@
 import { Route, Switch, Router } from 'react-router-dom'
-import { ThemeProvider, Typography } from '@mui/material'
+import { ThemeProvider, CssBaseline, Typography } from '@mui/material'
 
 import { AppGate } from '../model'
 import { history, theme } from '../../../shared'
@@ -10,6 +10,7 @@ export function App() {
     <>
       <AppGate />
       <ThemeProvider theme={theme}>
+        <CssBaseline />
         <Router history={history}>
           <Switch>
             <Route exact path="/auth" component={AuthPage} />

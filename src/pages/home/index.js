@@ -1,3 +1,5 @@
+import { Typography } from '@mui/material'
+
 export const HomePage = () => {
-  return <div>UJIN/Home</div>
+  return <Typography variant="h2">UJIN/Home</Typography>
 }
