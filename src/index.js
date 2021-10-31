@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { StrictMode } from 'react'
+import ReactDOM from 'react-dom'
 
-import App from './features/app';
+import { App } from './features'
 
 ReactDOM.render(
-  <React.StrictMode>
+  <StrictMode>
     <App />
-  </React.StrictMode>,
+  </StrictMode>,
   document.querySelector('.root')
-);
+)

@@ -1,7 +1,11 @@
+import { AppGate } from '../model'
+
 export function App() {
   return (
-    <div className="app-container">UJIN</div>
-  );
+    <>
+      <AppGate />
+      <div>app</div>
+    </>
+  )
 }
 
-// export default App;

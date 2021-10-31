@@ -1,1 +1,2 @@
-export { App as default } from "./view";
+export { App } from './view';
+export { appMount, appUnmount, appState, AppGate } from './model';
