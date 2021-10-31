@@ -5,7 +5,7 @@ import { AppGate } from '../model'
 import { history, theme } from '../../../shared'
 import { AuthPage, HomePage } from '../../../pages'
 
-export function App() {
+export const App = () => {
   return (
     <>
       <AppGate />
@@ -17,7 +17,6 @@ export function App() {
             <Route path="/" component={HomePage} />
           </Switch>
         </Router>
-        <Typography variant="h4">App</Typography>
       </ThemeProvider>
     </>
   )
