@@ -1,0 +1,106 @@
+{
+  "extends": [
+    "@eslint-kit/base",
+    "@eslint-kit/react",
+    "@eslint-kit/prettier",
+    "plugin:@typescript-eslint/eslint-recommended"
+  ],
+  "parser": "babel-eslint",
+  "plugins": ["jest", "deprecate"],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@api", "./src/api"],
+          ["@components", "./src/components"],
+          ["@configs", "./src/configs"],
+          ["@consts", "./src/consts"],
+          ["@features", "./src/features"],
+          ["@img", "./src/img"],
+          ["@redux", "./src/redux"],
+          ["@tools", "./src/tools"],
+          ["@ui", "./src/ui"]
+        ],
+        "extensions": [".js", ".jsx", ".json", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "import/extensions": [
+      "warn",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "deprecate/import": ["warn", { "name": "moment", "use": "date-fns" }],
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "@folder-alias/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@file-alias",
+            "group": "internal",
+            "position": "before"
+          }
+        ]
+      }
+    ],
+    "react/prop-types": 0,
+    "no-underscore-dangle": 0,
+    "max-len": "off",
+    "no-tabs": "warn",
+    "no-mixed-spaces-and-tabs": "warn",
+    "import/imports-first": ["error", "absolute-first"],
+    "import/newline-after-import": "error",
+    "no-shadow": "off",
+    "no-nested-ternary": "off",
+    "unicorn/no-nested-ternary": "off",
+    "guard-for-in": "warn",
+    "no-param-reassign": "warn",
+    "no-restricted-syntax": "warn",
+    "react/jsx-no-bind": "warn",
+    "react/no-unused-state": "warn",
+    "react/destructuring-assignment": "off",
+    "react/sort-comp": "warn",
+    "array-callback-return": "warn",
+    "no-unused-vars": "off",
+    "react/no-did-update-set-state": "warn",
+    "react/no-array-index-key": "warn",
+    "no-prototype-builtins": "warn",
+    "no-use-before-define": "off",
+    "no-case-declarations": "warn",
+    "no-unused-expressions": "warn",
+    "no-unsafe-finally": "warn",
+    "react/no-children-prop": "warn",
+    "consistent-return": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "off",
+    "camelcase": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/no-anonymous-default-export": "off",
+    "sonarjs/prefer-immediate-return": "off",
+    "sonarjs/no-identical-functions": "off",
+    "sonarjs/no-duplicate-string": "off",
+    "sonarjs/cognitive-complexity": "off",
+    "unicorn/explicit-length-check": "off"
+  }
+}
