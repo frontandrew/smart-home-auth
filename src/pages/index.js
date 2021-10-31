@@ -1,1 +1,2 @@
-export { AuthPage } from './auth-page'
+export { AuthPage } from './auth'
+export { HomePage } from './home'
