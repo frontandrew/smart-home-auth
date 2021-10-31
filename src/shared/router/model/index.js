@@ -1,3 +1,13 @@
 import './init'
 
-export { fxRouterInit } from './model' 
+export {
+  history,
+  $history,
+  $lastAction,
+  $pathname,
+  $historySearch,
+  historyPush,
+  searchPush,
+  routingDomain,
+  updateLocation,
+} from './model'
