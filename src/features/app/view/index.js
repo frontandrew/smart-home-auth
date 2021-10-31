@@ -5,6 +5,8 @@ import { AppGate } from '../model'
 import { history, theme } from '../../../shared'
 import { AuthPage, HomePage } from '../../../pages'
 
+import '../../../shared/ui/app-root/index.css'
+
 export const App = () => {
   return (
     <>

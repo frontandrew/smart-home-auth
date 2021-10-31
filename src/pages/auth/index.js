@@ -1,16 +1,20 @@
-import { Grid, Typography } from '@mui/material'
+import { Grid, Typography, useMediaQuery } from '@mui/material'
 
 import { AuthForm } from '../../features'
 import { AuthLogo } from '../../resorses'
+import { useStyles } from './styles'
+
 
 export const AuthPage = () => {
+  const isMobile = useMediaQuery('(max-width:1080px)')
+  const { box, plug, form, plug_logo } = useStyles({ isMobile })
   return (
-  <Grid container >
-    <Grid item>
-      <img src={AuthLogo} alt="ЛИВИКОМ Ваш умный дом" />
-    </Grid>
-    <Grid item>
+  <main className={box}>
+    <div className={plug}>
+      <img  className={plug_logo} src={AuthLogo} alt="ЛИВИКОМ Ваш умный дом" />
+    </div>
+    <div className={form}>
       <AuthForm />
-    </Grid>
-  </Grid>
+    </div>
+  </main>
 )}
