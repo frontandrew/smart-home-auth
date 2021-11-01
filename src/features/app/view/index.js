@@ -19,8 +19,8 @@ export const App = () => {
         <Router history={history}>
           <Suspense fallback={() => console.log('fallback!!')}>
             <Switch>
-              <Route exact path="/auth" component={AuthPage} />
-              <Route path="/" component={HomePage} />
+              <Route exact path="/" component={AuthPage} />
+              <Route path="/home" component={HomePage} />
             </Switch>
           </Suspense>
         </Router>        
