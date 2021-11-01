@@ -1,11 +1,11 @@
-import { Grid, Typography, useMediaQuery } from '@mui/material'
+import { useMediaQuery } from '@mui/material'
 
 import { AuthForm } from '../../features'
 import { AuthLogo } from '../../resorses'
 import { useStyles } from './styles'
 
 
-export const AuthPage = () => {
+const AuthPage = () => {
   const isMobile = useMediaQuery('(max-width:1080px)')
   const { box, plug, form, plug_logo } = useStyles({ isMobile })
   return (
@@ -18,3 +18,5 @@ export const AuthPage = () => {
     </div>
   </main>
 )}
+
+export { AuthPage as default }
