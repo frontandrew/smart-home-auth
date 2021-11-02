@@ -1,6 +1,6 @@
 import { useMediaQuery, AppBar, colors, Typography } from '@mui/material'
 import { format } from 'date-fns'
-import { ru } from 'date-fns/locale'
+// import { ru } from 'date-fns/locale'
 
 import { AuthForm } from '../../features'
 import { AuthLogo } from '../../resorses'

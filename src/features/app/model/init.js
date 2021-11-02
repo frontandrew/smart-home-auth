@@ -1,4 +1,4 @@
-import { forward } from 'effector'
+// import { forward } from 'effector'
 
 import { appMount } from './model'
 
